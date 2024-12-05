@@ -25,11 +25,11 @@ We want to create this basic tree for automating eating:
 First we create the nodes from the bottom up. We need Leaf nodes for the bottom row and the one in the middle:
 ```
 local haveFood = BT.leaf("Do I have food?", 1, checkCabinet, nil)
-local prepareFood = BT.leaf("Prepare food", 1, prepareFood, nil)
-local eat = BT.leaf(Eat", 1, eat, nil)
+local prepareFood = BT.leaf("Prepare food", 1, prepare, nil)
+local eat = BT.leaf(Eat", 1, consume, nil)
 local haveMoney = BT.leaf("Do I have money?", 1, checkWallet, nil)
-local orderFood = BT.leaf("Order money?", 1, orderFood, nil)
-local wait = BT.leaf("Wait",1,wait, nil)
+local orderFood = BT.leaf("Order money?", 1, order, nil)
+local waitAWhile = BT.leaf("Wait",1,wait, nil)
 ```
 
 Two remarks here:
